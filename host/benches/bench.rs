@@ -46,8 +46,8 @@ use shared::{hash::Sha, tree_size_n, Tree};
 // }
 
 #[benchmark("Merkle Tree Merge", [
-    // ("1 + 1", (tree_size_n::<Sha>(0), tree_size_n::<Sha>(0))),
-    ("2^10 + 2^10", (tree_size_n(10), tree_size_n(10))),
+    ("1 + 1", (tree_size_n::<Sha>(0), tree_size_n::<Sha>(0))),
+    // ("2^10 + 2^10", (tree_size_n(10), tree_size_n(10))),
     // ("2^10 + 2^20", (tree_size_n(10), tree_size_n(20))),
     // ("2^20 + 2^20", (tree_size_n(20), tree_size_n(20))),
 ])]
