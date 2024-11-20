@@ -1,0 +1,150 @@
+{
+  "name": "risc-zero",
+  "results": [
+    {
+      "name": "Fibonacci",
+      "results": [
+        {
+          "metrics": {
+            "compressed_proof_size_bytes": 208710,
+            "cycles": 65536,
+            "memory_usage_bytes": 0,
+            "proof_size_bytes": 215822
+          },
+          "name": "1",
+          "time": {
+            "nanos": 75901,
+            "secs": 0
+          }
+        },
+        {
+          "metrics": {
+            "compressed_proof_size_bytes": 210598,
+            "cycles": 65536,
+            "memory_usage_bytes": 0,
+            "proof_size_bytes": 215822
+          },
+          "name": "10",
+          "time": {
+            "nanos": 56093,
+            "secs": 0
+          }
+        },
+        {
+          "metrics": {
+            "compressed_proof_size_bytes": 210454,
+            "cycles": 65536,
+            "memory_usage_bytes": 0,
+            "proof_size_bytes": 215822
+          },
+          "name": "100",
+          "time": {
+            "nanos": 44434,
+            "secs": 0
+          }
+        },
+        {
+          "metrics": {
+            "compressed_proof_size_bytes": 207361,
+            "cycles": 65536,
+            "memory_usage_bytes": 0,
+            "proof_size_bytes": 215822
+          },
+          "name": "1000",
+          "time": {
+            "nanos": 47591,
+            "secs": 0
+          }
+        },
+        {
+          "metrics": {
+            "compressed_proof_size_bytes": 207757,
+            "cycles": 65536,
+            "memory_usage_bytes": 0,
+            "proof_size_bytes": 215822
+          },
+          "name": "10000",
+          "time": {
+            "nanos": 40678,
+            "secs": 0
+          }
+        },
+        {
+          "metrics": {
+            "compressed_proof_size_bytes": 206257,
+            "cycles": 65536,
+            "memory_usage_bytes": 0,
+            "proof_size_bytes": 215822
+          },
+          "name": "100000",
+          "time": {
+            "nanos": 48103,
+            "secs": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "SHA256",
+      "results": [
+        {
+          "metrics": {
+            "compressed_proof_size_bytes": 209856,
+            "cycles": 65536,
+            "memory_usage_bytes": 0,
+            "proof_size_bytes": 215822
+          },
+          "name": "1k bytes",
+          "time": {
+            "nanos": 11248,
+            "secs": 0
+          }
+        },
+        {
+          "metrics": {
+            "compressed_proof_size_bytes": 227057,
+            "cycles": 131072,
+            "memory_usage_bytes": 0,
+            "proof_size_bytes": 238862
+          },
+          "name": "10k bytes",
+          "time": {
+            "nanos": 24406,
+            "secs": 0
+          }
+        },
+        {
+          "metrics": {
+            "compressed_proof_size_bytes": 240633,
+            "cycles": 262144,
+            "memory_usage_bytes": 0,
+            "proof_size_bytes": 250574
+          },
+          "name": "100k bytes",
+          "time": {
+            "nanos": 12049,
+            "secs": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "Merkle Tree Merge",
+      "results": [
+        {
+          "metrics": {
+            "compressed_proof_size_bytes": 208133,
+            "cycles": 65536,
+            "memory_usage_bytes": 0,
+            "proof_size_bytes": 215822
+          },
+          "name": "1 + 1",
+          "time": {
+            "nanos": 11367,
+            "secs": 0
+          }
+        }
+      ]
+    }
+  ]
+}

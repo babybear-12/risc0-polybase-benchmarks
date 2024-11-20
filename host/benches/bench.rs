@@ -1,8 +1,7 @@
 extern crate host;
 
 use benchy::{benchmark, BenchmarkRun};
-// use host::{blake3::blake3, fib::fib, merkle, sha::sha};
-use host::merkle;
+use host::{fib::fib, sha::sha, merkle};
 use risc0_zkvm::{Receipt, SessionStats};
 use shared::{hash::Sha, tree_size_n, Tree};
 
@@ -12,28 +11,28 @@ use shared::{hash::Sha, tree_size_n, Tree};
 //     log_session(&b.run(prove), b);
 // }
 
-// #[benchmark("Fibonacci", [
-//     ("1", 1),
-//     ("10", 10),
-//     ("100", 100),
-//     ("1000", 1000),
-//     ("10000", 10000),
-//     ("100000", 100000),
-// ])]
-// fn fibonacci(b: &mut BenchmarkRun, n: u32) {
-//     let prove = fib(n);
-//     log_session(&b.run(prove), b);
-// }
+#[benchmark("Fibonacci", [
+    ("1", 1),
+    ("10", 10),
+    ("100", 100),
+    ("1000", 1000),
+    ("10000", 10000),
+    ("100000", 100000),
+])]
+fn fibonacci(b: &mut BenchmarkRun, n: u32) {
+    let prove = fib(n);
+    log_session(&b.run(prove), b);
+}
 
-// #[benchmark("SHA256", [
-//     ("1k bytes", 1),
-//     ("10k bytes", 10),
-//     // ("100k bytes", 100),
-// ])]
-// fn sha256(b: &mut BenchmarkRun, n: usize) {
-//     let prove = sha(n);
-//     log_session(&b.run(prove), b);
-// }
+#[benchmark("SHA256", [
+    ("1k bytes", 1),
+    ("10k bytes", 10),
+    ("100k bytes", 100),
+])]
+fn sha256(b: &mut BenchmarkRun, n: usize) {
+    let prove = sha(n);
+    log_session(&b.run(prove), b);
+}
 
 // #[benchmark("Blake3", [
 //     ("1k bytes", 1),
@@ -87,8 +86,8 @@ fn log_session((receipt, session): &(Receipt, SessionStats), b: &mut BenchmarkRu
 benchy::main!(
     "risc-zero",
     // assert,
-    // fibonacci,
-    // sha256,
+    fibonacci,
+    sha256,
     // blake3_bench,
     merkle_merge,
     // merkle_membership,
