@@ -1,9 +1,8 @@
 extern crate host;
 
 use benchy::{benchmark, BenchmarkRun};
-use host::{fib::fib, sha::sha, merkle};
+use host::{fib::fib, merkle, sha::sha};
 use risc0_zkvm::{Receipt, SessionStats};
-use shared::{hash::Sha, tree_size_n, Tree};
 
 // #[benchmark]
 // fn assert(b: &mut BenchmarkRun) {
@@ -44,22 +43,22 @@ fn sha256(b: &mut BenchmarkRun, n: usize) {
 //     log_session(&b.run(prove), b);
 // }
 
-#[benchmark("Merkle Tree Merge", [
-    ("1 + 1", (tree_size_n::<Sha>(0), tree_size_n::<Sha>(0))),
-    // ("2^10 + 2^10", (tree_size_n(10), tree_size_n(10))),
-    // ("2^10 + 2^20", (tree_size_n(10), tree_size_n(20))),
-    // ("2^20 + 2^20", (tree_size_n(20), tree_size_n(20))),
-])]
-fn merkle_merge(b: &mut BenchmarkRun, (tree1, tree2): (Tree<Sha>, Tree<Sha>)) {
-    let prove = merkle::merkle(tree1, tree2);
-    log_session(&b.run(prove), b);
-}
-
-// #[benchmark("Merkle Membership")]
-// fn merkle_membership(b: &mut BenchmarkRun) {
-//     let prove = merkle::merkle_membership(10);
+// #[benchmark("Merkle Tree Merge", [
+//     ("1 + 1", (tree_size_n::<Sha>(0), tree_size_n::<Sha>(0))),
+//     // ("2^10 + 2^10", (tree_size_n(10), tree_size_n(10))),
+//     // ("2^10 + 2^20", (tree_size_n(10), tree_size_n(20))),
+//     // ("2^20 + 2^20", (tree_size_n(20), tree_size_n(20))),
+// ])]
+// fn merkle_merge(b: &mut BenchmarkRun, (tree1, tree2): (Tree<Sha>, Tree<Sha>)) {
+//     let prove = merkle::merkle(tree1, tree2);
 //     log_session(&b.run(prove), b);
 // }
+
+#[benchmark("Merkle Membership")]
+fn merkle_membership(b: &mut BenchmarkRun) {
+    let prove = merkle::merkle_membership(10);
+    log_session(&b.run(prove), b);
+}
 
 fn log_session((receipt, session): &(Receipt, SessionStats), b: &mut BenchmarkRun) {
     let cycles = session.total_cycles;
@@ -89,6 +88,6 @@ benchy::main!(
     fibonacci,
     sha256,
     // blake3_bench,
-    merkle_merge,
-    // merkle_membership,
+    // merkle_merge,
+    merkle_membership,
 );

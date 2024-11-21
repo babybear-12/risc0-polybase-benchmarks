@@ -6,79 +6,79 @@
       "results": [
         {
           "metrics": {
-            "compressed_proof_size_bytes": 208710,
+            "compressed_proof_size_bytes": 210597,
             "cycles": 65536,
             "memory_usage_bytes": 0,
             "proof_size_bytes": 215822
           },
           "name": "1",
           "time": {
-            "nanos": 75901,
+            "nanos": 56063,
             "secs": 0
           }
         },
         {
           "metrics": {
-            "compressed_proof_size_bytes": 210598,
+            "compressed_proof_size_bytes": 205826,
             "cycles": 65536,
             "memory_usage_bytes": 0,
             "proof_size_bytes": 215822
           },
           "name": "10",
           "time": {
-            "nanos": 56093,
+            "nanos": 69325,
             "secs": 0
           }
         },
         {
           "metrics": {
-            "compressed_proof_size_bytes": 210454,
+            "compressed_proof_size_bytes": 210327,
             "cycles": 65536,
             "memory_usage_bytes": 0,
             "proof_size_bytes": 215822
           },
           "name": "100",
           "time": {
-            "nanos": 44434,
+            "nanos": 103846,
             "secs": 0
           }
         },
         {
           "metrics": {
-            "compressed_proof_size_bytes": 207361,
+            "compressed_proof_size_bytes": 208315,
             "cycles": 65536,
             "memory_usage_bytes": 0,
             "proof_size_bytes": 215822
           },
           "name": "1000",
           "time": {
-            "nanos": 47591,
+            "nanos": 70053,
             "secs": 0
           }
         },
         {
           "metrics": {
-            "compressed_proof_size_bytes": 207757,
+            "compressed_proof_size_bytes": 206182,
             "cycles": 65536,
             "memory_usage_bytes": 0,
             "proof_size_bytes": 215822
           },
           "name": "10000",
           "time": {
-            "nanos": 40678,
+            "nanos": 63687,
             "secs": 0
           }
         },
         {
           "metrics": {
-            "compressed_proof_size_bytes": 206257,
+            "compressed_proof_size_bytes": 209783,
             "cycles": 65536,
             "memory_usage_bytes": 0,
             "proof_size_bytes": 215822
           },
           "name": "100000",
           "time": {
-            "nanos": 48103,
+            "nanos": 264947,
             "secs": 0
           }
         }
@@ -89,58 +89,58 @@
       "results": [
         {
           "metrics": {
-            "compressed_proof_size_bytes": 209856,
+            "compressed_proof_size_bytes": 210157,
             "cycles": 65536,
             "memory_usage_bytes": 0,
             "proof_size_bytes": 215822
           },
           "name": "1k bytes",
           "time": {
-            "nanos": 11248,
+            "nanos": 25095,
             "secs": 0
           }
         },
         {
           "metrics": {
-            "compressed_proof_size_bytes": 227057,
+            "compressed_proof_size_bytes": 229677,
             "cycles": 131072,
             "memory_usage_bytes": 0,
             "proof_size_bytes": 238862
           },
           "name": "10k bytes",
           "time": {
-            "nanos": 24406,
+            "nanos": 15865,
             "secs": 0
           }
         },
         {
           "metrics": {
-            "compressed_proof_size_bytes": 240633,
+            "compressed_proof_size_bytes": 240952,
             "cycles": 262144,
             "memory_usage_bytes": 0,
             "proof_size_bytes": 250574
           },
           "name": "100k bytes",
           "time": {
-            "nanos": 12049,
+            "nanos": 11226,
             "secs": 0
           }
         }
       ]
     },
     {
-      "name": "Merkle Tree Merge",
+      "name": "Merkle Membership",
       "results": [
         {
           "metrics": {
-            "compressed_proof_size_bytes": 208133,
+            "compressed_proof_size_bytes": 208862,
             "cycles": 65536,
             "memory_usage_bytes": 0,
             "proof_size_bytes": 215822
           },
-          "name": "1 + 1",
+          "name": "Merkle Membership",
           "time": {
-            "nanos": 11367,
+            "nanos": 14052,
             "secs": 0
           }
         }
